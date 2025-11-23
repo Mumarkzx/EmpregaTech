@@ -1,33 +1,52 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form-contato");
+  const erro = document.getElementById("mensagem-erro");
+  const sucesso = document.getElementById("mensagem-sucesso");
 
-const form = document.getElementById("formContato");
-const mensagemRetorno = document.getElementById("mensagemRetorno");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); 
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-  const nome = document.getElementById("nome").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const mensagem = document.getElementById("mensagem").value.trim();
+    
+    if (nome === "" || email === "" || mensagem === "") {
+      erro.textContent = "Por favor, preencha todos os campos obrigatórios.";
+      erro.style.display = "block";
+      sucesso.style.display = "none";
+      return;
+    }
 
- 
-  if (nome === "" || email === "" || mensagem === "") {
-    mensagemRetorno.textContent = "Por favor, preencha todos os campos!";
-    mensagemRetorno.className = "mensagem-erro";
-    return;
-  }
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexEmail.test(email)) {
+      erro.textContent = "Digite um e-mail válido.";
+      erro.style.display = "block";
+      sucesso.style.display = "none";
+      return;
+    }
 
+    erro.style.display = "none";
+    sucesso.textContent = "Mensagem enviada com sucesso! Obrigado por entrar em contato.";
+    sucesso.style.display = "block";
 
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!regexEmail.test(email)) {
-    mensagemRetorno.textContent = "Digite um e-mail válido!";
-    mensagemRetorno.className = "mensagem-erro";
-    return;
-  }
+  
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("email", email);
+    localStorage.setItem("mensagem", mensagem);
 
- 
-  mensagemRetorno.textContent = "Mensagem enviada com sucesso!";
-  mensagemRetorno.className = "mensagem-sucesso";
-
-
-  form.reset();
+    form.reset();
+  });
 });
+
+const botaoToggle = document.getElementById("toggle-form");
+const formContato = document.getElementById("form-contato");
+
+botaoToggle.addEventListener("click", () => {
+  if (formContato.style.display === "none") {
+    formContato.style.display = "flex";
+  } else {
+    formContato.style.display = "none";
+  }
+});
+
