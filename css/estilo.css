@@ -1,5 +1,6 @@
 body {
-  font-family: var(--fonte);
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
   background-color: #F8F8F8;
 }
 .Logo {
@@ -23,7 +24,7 @@ body {
   font-size: 30px;
   font-weight: 600;
   margin-left: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   color: #4A90E2;
 }                     
 .menu nav a {                                 
@@ -38,8 +39,9 @@ body {
   color: #FF9800;
 }
 section {
-    margin-bottom: 48px;                      
-    background: var(--branco);  
+    margin-bottom: 48px;
+    text-align: center;
+    background: #fff;  
     border-radius: 16px;  
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     padding: 32px;  
@@ -47,7 +49,7 @@ section {
   
 section h2 {
     font-size: 28px;  
-    color: var(--texto);  
+    color: #333333;  
     margin-bottom: 24px;  
 } 
   
