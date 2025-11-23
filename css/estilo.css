@@ -6,9 +6,9 @@ body {
 .Logo {
     width: 75px;
     border-radius: 0%;
-    height: auto;
+    height: auto;                         
 }
-.menu {
+.menu {                         
   background-color: #b5dbf5;
   color: blue;
   display: flex;
@@ -17,7 +17,7 @@ body {
   padding: 16px 32px;
   flex-wrap: wrap;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
+}                                 
 .menu h1 {
   margin: 0;
   font-size: 30px;
@@ -25,15 +25,15 @@ body {
   margin-left: 16px;
   letter-spacing: 0.5px;
 }
-.menu nav a {
+.menu nav a {                                 
   color: #333;
   text-decoration: none;
   margin: 0 15px;
-  font-size: 18px;
+  font-size: 18px;                          
   position: relative;
   transition: all 0.3s ease;
 }
-.menu nav a:hover {
+.menu nav a:hover {                               
   color: #200ae9;
 }
 section {
