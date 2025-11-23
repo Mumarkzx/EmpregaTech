@@ -51,8 +51,8 @@ section h2 {
     font-size: 28px;  
     color: #333333;  
     margin-bottom: 24px;  
-} 
-  
+}
+
 .integrantes-section {
     text-align: center;
     padding: 40px 20px;
@@ -157,11 +157,23 @@ button:hover {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card h3 {
+  color: #1B4F72;
+    font-size: 18px;
+    font-weight: 600;
+    min-height: 40px;
     margin-bottom: 10px;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1),
+                0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -212,6 +224,7 @@ footer {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .sobre-card h3 {
@@ -222,6 +235,12 @@ footer {
 .sobre-card ul {
     list-style: disc;
     padding-left: 20px;
+}
+
+.sobre-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1),
+                0 15px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sobre-equipe,
