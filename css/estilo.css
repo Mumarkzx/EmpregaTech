@@ -3,6 +3,7 @@ body {
   color: #333333;
   background-color: #F8F8F8;
   padding-top: 80px;
+  margin: 0;
 }
 .Logo {
     width: 75px;
@@ -30,6 +31,7 @@ body {
   margin: 0;
   font-size: 30px;
   font-weight: 600;
+  margin-left: 16px;
   letter-spacing: 1px;
   color: #4A90E2;
 }                     
@@ -194,8 +196,9 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #1B4F72;
-    color: #4A90E2;
+    color: #fff;
     margin-top: 40px;
+    
 }
 .sobre {
     width: 80%;
